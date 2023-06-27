@@ -1,0 +1,66 @@
+// Custom theme overrides
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+  7: $font-size-base * 0.8,
+  8: $font-size-base * 0.5,
+);
+
+// Custom variables
+$ca_blue:           #208EFF;
+$ca_blue-darker:    #1875d7;
+$ca_dark_blue:      #212235;
+$ca_green:          #0ABA66;
+$ca_white:          #fff;
+$ca_black:          #000;
+$ca_grey:           #777777;
+$ca_dark_grey:      #676767;
+$ca_light_grey:     #a8a8a8;
+$ca_lighter_grey:   #C4C4C4;
+$ca_light:          #f0f0f0;
+$ca_lighter:        #f9f9f9;
+
+//Override existing variables
+
+$nav-tabs-link-active-bg:           #fff;
+$nav-tabs-link-active-color:        $ca_blue;
+$nav-tabs-link-active-border-color: $nav-tabs-border-color;
+$pagincaion-focus-bg:               #000;
+$pagincaion-active-bg:              $secondary;
+$pagincaion-active-border-color:    $secondary;
+$pagincaion-color:                  #333;
+$pagincaion-hover-color:            #111;
+$pagincaion-focus-color:            $ca_white;
+
+// Crecae your own map
+$custom-colors: (
+  "blue":         $ca_blue,
+  "white":        $ca_white,
+  "black":        $ca_black,
+  "grey":         $ca_grey,
+  "dark-grey":    $ca-dark_grey,
+  "light-grey":   $ca_light_grey,
+  "lighter-grey": $ca_lighter_grey,
+  "lighter":      $ca_lighter,
+);
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $ca_light,
+  "dark":       $dark
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+$utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
+$utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
+$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");

@@ -1,0 +1,16 @@
+// Required
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+
+// Icons
+//@import "node_modules/bootstrap-icons/font/bootstrap-icons";
+
+// Override theme variables
+@import "theme/theme-overrides";
+@import "theme/theme-global";
+@import "theme/theme-nav";
+@import "theme/theme-list";
+
+// Import bootstrap styles
+@import "~bootstrap/scss/bootstrap";
+@import "~vue-multiselect/dist/vue-multiselect.min.css";

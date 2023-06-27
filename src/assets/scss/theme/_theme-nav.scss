@@ -1,0 +1,34 @@
+.nav {
+  li {
+    position: relative;
+    & + li {
+      margin-left: 5px;
+    }
+  }
+}
+
+.nav-link {
+  border-radius: 4px;
+  min-width: 110px;
+  text-align: center;
+  position: relative;
+
+  &:hover {
+    background: rgba(255,255,255, 0.1);
+  }
+
+  &.active {
+    background: rgba(255,255,255, 0.1);
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 4px;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      background: $ca_blue;
+    }
+  }
+}

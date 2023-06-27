@@ -1,0 +1,211 @@
+.main-content {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 84px;
+    min-height: calc(100vh - 84px);
+    background: #f0f0f0;
+    padding-bottom: 80px;
+}
+
+a {
+    color: $ca_blue;
+}
+
+.hoverable {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.b-form-btn-label-control.form-control {
+    display: flex;
+    align-items: stretch;
+    height: auto;
+    padding: 0;
+    background-image: none;
+}
+
+.dropdown.b-form-datepicker {
+    & label.form-control {
+        width: auto;
+        display: inline-block;
+        border: none;
+    }
+}
+
+.b-form-btn-label-control.form-control>.btn {
+    line-height: 1;
+    font-size: inherit;
+    box-shadow: none!important;
+    border: 0;
+}
+
+.b-form-btn-label-control.form-control>.form-control {
+    height: auto;
+    min-height: calc(1.5em + 0.75rem);
+    padding-left: 0.25rem;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    word-break: break-word;
+    font-size: inherit;
+    white-space: normal;
+    cursor: pointer;
+}
+
+.b-calendar .b-calendar-grid .row {
+    flex-wrap: nowrap;
+}
+
+.b-calendar .b-calendar-grid {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.b-calendar .b-calendar-grid-body .col[data-date] .btn {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    line-height: 1;
+    margin: 3px auto;
+    padding: 9px 0;
+}
+
+.b-calendar .b-calendar-grid-body .col[data-date] .btn {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    line-height: 1;
+    margin: 3px auto;
+    padding: 9px 0;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: $ca_blue;
+    border-color: $ca_blue;
+}
+
+.multiselect__option--highlight {
+    background: $ca_blue;
+}
+
+.multiselect__option--highlight::after {
+    background: $ca_blue;
+}
+
+
+.multiselect__tag {
+    background: $ca_blue;
+    margin-bottom: 0;
+}
+
+.multiselect__tag-icon:focus, .multiselect__tag-icon:hover {
+    background: $ca_blue-darker;
+}
+
+.multiselect__tags {
+    border-color: #ced4da;
+    padding: 6px 40px 0 8px;
+}
+
+.multiselect__select {
+    padding: 4px 8px;
+}
+
+.dropdown-toggle:hover {
+    cursor: pointer;
+}
+
+.card-link {
+    &:hover {
+        & > .card {
+            border-color: $ca_blue;
+            box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
+            background: lighten($ca_blue, 40%);
+            color: $ca_blue_darker;
+        }
+    }
+}
+
+a.page-link {
+    color: #333333;
+}
+
+.page-link.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.page-link.active {
+    background: $dark;
+    color: $white;
+}
+
+.movie-card-picture {
+    position: relative;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.movie-card-picture::after {
+    content: "";
+    color: #fff;
+    font-weight: 500;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.3);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.movie-card:hover {
+    .movie-card-picture {
+        &::after {
+            opacity: 1;
+        }
+    }
+    .movie-card-link {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+.movie-card-link {
+    opacity: 0;
+    pointer-events: none;
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    left: 0;
+}
+
+.movie-card-link.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    backdrop-filter: blur(5px);
+
+    & .btn-light {
+        background: rgba(255,255,255, 0.2);
+        color: #fff;
+        border: none;
+    }
+}
+
+.movie-title {
+    max-width: 80%;
+}

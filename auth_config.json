@@ -1,0 +1,6 @@
+{
+  "domain": "dev-ciko6qxd.us.auth0.com",
+  "clientId": "NHLb3O0L2oJgq1uBsdZAbDgPZjsRem67",
+  "audience": "casting_agency",
+  "redirectUri": "https://127.0.0.1:8085"
+}

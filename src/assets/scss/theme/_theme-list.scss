@@ -1,0 +1,27 @@
+.movie-row {
+  gap: 15px;
+}
+
+.row .movie-card {
+  width: calc(25% - 15px);
+  transition: .2s ease all;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  & .card {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  & .movie-card-picture {
+    min-height: 405px;
+    height: auto;
+    pointer-events: none;
+  }
+
+  & .card-footer {
+    min-height: 105px;
+  }
+}
